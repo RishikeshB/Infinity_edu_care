@@ -1,1 +1,6 @@
-# educational.github.io
+#INFINITY EDU CARE
+--> HOME
+--> COURSE
+--> REGISTRATION
+--> LOCATION
+--> CONTACT DETAILS
