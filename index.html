@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>University Website</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <body>
+      
     <section class="header">
       <nav>
         <a href="index.html"><img src="./images/logo.png" alt="" /></a>
@@ -152,11 +155,49 @@
       </div>
     </section>
 
+    <!-- call to registration -->
+    <div class="container">
+      <form id="registrationForm" onsubmit="return validateForm()">
+          <h2>Student Registration Form</h2>
+          <label for="name">Name *:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="phoneNumber">Phone Number *:</label>
+          <input type="tel" id="phone" name="phone" required>
+          
+          <label for="standard">Standard *:</label>
+          <select id="standard" name="standard" required>
+              <option value="">Select Grade</option>
+              <option value="9">9th Grade</option>
+              <option value="10">10th Grade</option>
+              <option value="11">11th Grade</option>
+              <option value="12">12th Grade</option>
+          </select>
+          
+          <label for="select">Select Subject *: </label>
+            <div class="dropdown" id="dropdown">
+                <label><input type="checkbox" value="Math" onchange="updateSelectedOptions()"> Maths</label>
+                <label><input type="checkbox" value="Science" onchange="updateSelectedOptions()"> Business Maths</label>
+                <label><input type="checkbox" value="English" onchange="updateSelectedOptions()"> Physics</label>
+                <label><input type="checkbox" value="History" onchange="updateSelectedOptions()"> Chemistry</label>
+                <label><input type="checkbox" value="Geography" onchange="updateSelectedOptions()"> Science</label>
+            </div>
+          
+          <label for="school">School Name:</label>
+          <input type="text" id="school" name="school" required>
+          
+          <label for="id">Upload School ID:</label>
+          <input type="file" id="id" name="id">
+            <p class="danger"><strong> Note: * are required field</strong></p>
+          <button type="submit" class="hero-btn">Register</button>
+      </form>
+  </div>
+
     <!----- Call to action ------>
 
     <section class="cta">
       <h1>Endroll For Our Various Online Courses</h1>
-      <a href="" class="hero-btn">CONTACT US</a>
+      <a href="./contact.html" class="hero-btn">CONTACT US</a>
     </section>
 
     <!--------- footer --------->
